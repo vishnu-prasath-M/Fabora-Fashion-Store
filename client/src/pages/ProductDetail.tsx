@@ -50,7 +50,7 @@ const ProductDetail = () => {
   const { data: product, isLoading, isError } = useQuery({
     queryKey: ["product", id],
     queryFn: async () => {
-      const response = await fetch(`/api/products/${id}`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/products/${id}`);
       if (!response.ok) throw new Error("Product not found");
       const data = await response.json();
       // Map _id to id for frontend compatibility
@@ -63,7 +63,7 @@ const ProductDetail = () => {
   const { data: allProducts } = useQuery({
     queryKey: ["products"],
     queryFn: async () => {
-      const response = await fetch("/api/products");
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/products`);
       if (!response.ok) throw new Error("Failed to fetch products");
       const data = await response.json();
       return data.map((p: any) => ({ ...p, id: p._id }));

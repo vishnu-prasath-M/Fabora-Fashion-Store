@@ -25,7 +25,7 @@ const Profile = () => {
 
         const fetchOrders = async () => {
             try {
-                const response = await fetch('/api/orders/my-orders', {
+                const response = await fetch(`${import.meta.env.VITE_API_URL}/api/orders/my-orders`, {
                     headers: {
                         Authorization: `Bearer ${user.token}`,
                     },
@@ -44,7 +44,7 @@ const Profile = () => {
 
     const handleCancelOrder = async (orderId: string) => {
         try {
-            const response = await fetch(`/api/orders/${orderId}/cancel`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/orders/${orderId}/cancel`, {
                 method: 'PUT',
                 headers: {
                     Authorization: `Bearer ${user?.token}`,
