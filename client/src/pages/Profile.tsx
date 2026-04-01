@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
+import { useWishlist } from '@/contexts/WishlistContext';
 import FaboraHeader from '@/components/FaboraHeader';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -14,6 +15,7 @@ const Profile = () => {
     const [orders, setOrders] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
     const [activeTab, setActiveTab] = useState('orders');
+    const { items: wishlistItems, removeFromWishlist } = useWishlist();
 
     useEffect(() => {
         if (!user) {
@@ -212,10 +214,47 @@ const Profile = () => {
                         {activeTab === 'wishlist' && (
                             <div>
                                 <h1 className="editorial-heading text-3xl mb-8">My Wishlist</h1>
-                                <div className="p-10 bg-secondary/30 rounded-3xl border border-dashed border-border text-center">
-                                    <Heart className="w-12 h-12 text-muted-foreground mx-auto mb-4 opacity-20" />
-                                    <p className="text-muted-foreground">Your wishlist is empty.</p>
-                                </div>
+                                {wishlistItems.length === 0 ? (
+                                    <div className="p-10 bg-secondary/30 rounded-3xl border border-dashed border-border text-center">
+                                        <Heart className="w-12 h-12 text-muted-foreground mx-auto mb-4 opacity-20" />
+                                        <p className="text-muted-foreground">Your wishlist is empty.</p>
+                                    </div>
+                                ) : (
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                        {wishlistItems.map((product) => (
+                                            <div key={product.id} className="bg-white border border-border rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                                                <Link to={`/product/${product.id}`} className="block aspect-[3/4] bg-secondary overflow-hidden">
+                                                    <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+                                                </Link>
+                                                <div className="p-4">
+                                                    <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">{product.brand}</p>
+                                                    <Link to={`/product/${product.id}`}>
+                                                        <h3 className="text-sm font-medium mb-2 hover:text-primary transition-colors">{product.name}</h3>
+                                                    </Link>
+                                                    <p className="text-sm font-semibold mb-3">₹{product.price}</p>
+                                                    <div className="flex gap-2">
+                                                        <Button
+                                                            variant="outline"
+                                                            size="sm"
+                                                            className="flex-1 text-xs"
+                                                            asChild
+                                                        >
+                                                            <Link to={`/product/${product.id}`}>View</Link>
+                                                        </Button>
+                                                        <Button
+                                                            variant="ghost"
+                                                            size="sm"
+                                                            className="text-red-500 hover:text-red-600 hover:bg-red-50"
+                                                            onClick={() => removeFromWishlist(product.id)}
+                                                        >
+                                                            <XCircle size={16} />
+                                                        </Button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                         )}
                     </div>

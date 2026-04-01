@@ -5,8 +5,9 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { products } from "@/data/products";
 import { useCart } from "@/contexts/CartContext";
+import { useWishlist } from "@/contexts/WishlistContext";
 import AddToCartModal from "@/components/AddToCartModal";
-import { Minus, Plus, Star } from "lucide-react";
+import { Minus, Plus, Star, Heart } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import { useQuery } from "@tanstack/react-query";
 import { ShoppingBag, Loader2 } from "lucide-react";
@@ -43,6 +44,7 @@ const ProductDetail = () => {
   const [openSection, setOpenSection] = useState<string | null>("details");
   const [modalOpen, setModalOpen] = useState(false);
   const { addItem } = useCart();
+  const { isInWishlist, toggleWishlist } = useWishlist();
 
   // Fetch product from database
   const { data: product, isLoading, isError } = useQuery({
@@ -167,7 +169,19 @@ const ProductDetail = () => {
 
           <div className="md:pt-8">
             <p className="editorial-subheading mb-2">{product.brand}</p>
-            <h1 className="editorial-heading text-3xl md:text-4xl mb-4">{product.name}</h1>
+            <div className="flex items-start justify-between gap-4 mb-4">
+              <h1 className="editorial-heading text-3xl md:text-4xl">{product.name}</h1>
+              <button
+                onClick={() => product && toggleWishlist(product)}
+                className="p-2 rounded-full border border-border hover:border-foreground transition-colors shrink-0"
+                aria-label={isInWishlist(product.id) ? "Remove from wishlist" : "Add to wishlist"}
+              >
+                <Heart
+                  size={20}
+                  className={isInWishlist(product.id) ? "fill-red-500 text-red-500" : "text-muted-foreground"}
+                />
+              </button>
+            </div>
             <p className="text-lg font-sans mb-8">₹{product.price}</p>
             <p className="text-sm text-muted-foreground font-sans leading-relaxed mb-10">{product.description}</p>
 
