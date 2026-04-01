@@ -29,6 +29,10 @@ const AmazonPayLogo = () => (
 );
 
 const Checkout = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { items: cart, totalItems, subtotal: totalPrice, clearCart } = useCart();
   const { user } = useAuth();
   const navigate = useNavigate();

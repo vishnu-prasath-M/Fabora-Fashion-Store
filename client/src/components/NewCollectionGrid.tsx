@@ -1,17 +1,49 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { products } from "@/data/products";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import AddToCartModal from "./AddToCartModal";
+
+interface Product {
+  _id: string;
+  name: string;
+  price: number;
+  category: string;
+  image: string;
+  altImage?: string;
+  sizes: string[];
+  colors: { name: string; hex: string }[];
+  description: string;
+  brand: string;
+}
 
 const NewCollectionGrid = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalProductName, setModalProductName] = useState("");
-  const displayProducts = products.slice(0, 6);
+  const [products, setProducts] = useState<Product[]>([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/products`);
+        if (response.ok) {
+          const data = await response.json();
+          setProducts(data.slice(0, 6));
+        }
+      } catch (error) {
+        console.error("Failed to fetch products:", error);
+      }
+    };
+    fetchProducts();
+  }, []);
 
   const handleAdded = (name: string) => {
     setModalProductName(name);
     setModalOpen(true);
+  };
+
+  const handleProductClick = (productId: string) => {
+    navigate(`/product/${productId}`);
   };
 
   return (
@@ -29,13 +61,14 @@ const NewCollectionGrid = () => {
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
-        {displayProducts.map((product, i) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            featured={i === 1}
-            onAddedToCart={handleAdded}
-          />
+        {products.map((product, i) => (
+          <div key={product._id} onClick={() => handleProductClick(product._id)} className="cursor-pointer">
+            <ProductCard
+              product={{...product, id: product._id}}
+              featured={i === 1}
+              onAddedToCart={handleAdded}
+            />
+          </div>
         ))}
       </div>
 

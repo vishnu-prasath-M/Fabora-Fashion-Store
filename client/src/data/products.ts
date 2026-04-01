@@ -11,7 +11,7 @@ export interface Product {
   price: number;
   category: string;
   image: string;
-  altImage: string;
+  altImage?: string;
   sizes: string[];
   colors: { name: string; hex: string }[];
   description: string;

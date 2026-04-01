@@ -4,9 +4,14 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/contexts/CartContext";
 import { Minus, Plus, X } from "lucide-react";
+import { useEffect } from "react";
 
 const Cart = () => {
   const { items, removeItem, updateQuantity, subtotal } = useCart();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen">
