@@ -13,8 +13,8 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("Admin@gmail.com");
+  const [password, setPassword] = useState("Admin1234");
   const [name, setName] = useState("");
 
   const { login, user } = useAuth();
@@ -39,7 +39,7 @@ const Login = () => {
         const endpoint = isLogin ? "/api/auth/login" : "/api/auth/signup";
         const body = isLogin ? { email, password } : { name, email, password };
 
-        const response = await fetch(endpoint, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}${endpoint}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

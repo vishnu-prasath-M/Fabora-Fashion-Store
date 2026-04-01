@@ -7,7 +7,7 @@ import { useToast } from '@/hooks/use-toast';
 
 const AdminLogin = () => {
     const [email, setEmail] = useState('Admin@gmail.com');
-    const [password, setPassword] = useState('');
+    const [password, setPassword] = useState('Admin1234');
     const [loading, setLoading] = useState(false);
     const { login, admin } = useAdminAuth();
     const navigate = useNavigate();
