@@ -5,10 +5,11 @@ import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
 import ProductSkeleton from "@/components/ProductSkeleton";
 import AddToCartModal from "@/components/AddToCartModal";
-import { products as staticProducts } from "@/data/products";
 import { ShoppingBag, ChevronRight, Search, Loader2 } from "lucide-react";
 import Shopbann from "@/assets/sale-rack2.png";
 import { useQuery } from "@tanstack/react-query";
+
+const API_BASE_URL = "https://fabora-fashion-store-backend.onrender.com";
 
 const sizeOptions = ["XS", "S", "M", "L", "XL"];
 const colorOptions = [
@@ -34,7 +35,7 @@ const Products = () => {
   const { data: dbProducts, isLoading, isError } = useQuery({
     queryKey: ["products"],
     queryFn: async () => {
-      const response = await fetch("/api/products");
+      const response = await fetch(`${API_BASE_URL}/api/products`);
       if (!response.ok) throw new Error("Failed to fetch products");
       const data = await response.json();
       // Map _id to id for frontend compatibility
@@ -42,8 +43,7 @@ const Products = () => {
     },
   });
 
-  // Use DB products if available, otherwise fallback to static for initial UI
-  const productList = dbProducts || staticProducts;
+  const productList = dbProducts || [];
 
   // Update category when URL params change
   useEffect(() => {
@@ -229,7 +229,15 @@ const Products = () => {
             </div>
           </aside>
 
-          {isLoading ? (
+          {isError ? (
+            <div className="flex-1 flex flex-col items-center justify-center py-20">
+              <ShoppingBag size={48} strokeWidth={1} className="text-muted-foreground/40 mb-6" />
+              <p className="text-lg font-serif mb-2">Database is not started</p>
+              <p className="text-sm text-muted-foreground font-sans">
+                Please start the server to view products.
+              </p>
+            </div>
+          ) : isLoading ? (
             <div className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
               {[...Array(8)].map((_, i) => (
                 <ProductSkeleton key={i} />
