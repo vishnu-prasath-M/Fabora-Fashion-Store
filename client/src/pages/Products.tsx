@@ -9,7 +9,7 @@ import { ShoppingBag, ChevronRight, Search, Loader2 } from "lucide-react";
 import Shopbann from "@/assets/sale-rack2.png";
 import { useQuery } from "@tanstack/react-query";
 
-const API_BASE_URL = "https://fabora-fashion-store-backend.onrender.com";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "https://fabora-fashion-store-backend.onrender.com";
 
 const sizeOptions = ["XS", "S", "M", "L", "XL"];
 const colorOptions = [
