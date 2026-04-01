@@ -16,6 +16,24 @@ const Profile = () => {
     const [loading, setLoading] = useState(true);
     const [activeTab, setActiveTab] = useState('orders');
     const { items: wishlistItems, removeFromWishlist } = useWishlist();
+    
+    // Address management
+    const [showAddressForm, setShowAddressForm] = useState(false);
+    const savedAddress = user ? JSON.parse(localStorage.getItem(`address_${user._id}`) || "null") : null;
+    const [addressForm, setAddressForm] = useState({
+        firstName: savedAddress?.firstName || user?.name?.split(' ')[0] || "",
+        lastName: savedAddress?.lastName || user?.name?.split(' ').slice(1).join(' ') || "",
+        address: savedAddress?.address || "",
+        city: savedAddress?.city || "",
+        zipCode: savedAddress?.zipCode || "",
+        country: savedAddress?.country || "India",
+    });
+
+    useEffect(() => {
+        if (savedAddress) {
+            setAddressForm(savedAddress);
+        }
+    }, [savedAddress]);
 
     useEffect(() => {
         if (!user) {
@@ -64,6 +82,21 @@ const Profile = () => {
                 title: "Error",
                 description: "Could not cancel the order. Please try again.",
                 variant: "destructive",
+            });
+        }
+    };
+
+    const handleAddressChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setAddressForm({ ...addressForm, [e.target.name]: e.target.value });
+    };
+
+    const saveAddress = () => {
+        if (user) {
+            localStorage.setItem(`address_${user._id}`, JSON.stringify(addressForm));
+            setShowAddressForm(false);
+            toast({
+                title: "Address Updated",
+                description: "Your address has been saved successfully.",
             });
         }
     };
@@ -204,10 +237,114 @@ const Profile = () => {
                         {activeTab === 'address' && (
                             <div>
                                 <h1 className="editorial-heading text-3xl mb-8">My Address</h1>
-                                <div className="p-10 bg-secondary/30 rounded-3xl border border-dashed border-border text-center">
-                                    <MapPin className="w-12 h-12 text-muted-foreground mx-auto mb-4 opacity-20" />
-                                    <p className="text-muted-foreground">Address management coming soon.</p>
-                                </div>
+                                {savedAddress && !showAddressForm ? (
+                                    <div className="bg-white border border-border rounded-2xl p-6 shadow-sm">
+                                        <div className="flex items-start gap-4">
+                                            <div className="w-12 h-12 bg-foreground/10 rounded-full flex items-center justify-center shrink-0">
+                                                <MapPin className="w-6 h-6 text-foreground" />
+                                            </div>
+                                            <div className="flex-1">
+                                                <p className="font-medium text-foreground text-lg">{savedAddress.firstName} {savedAddress.lastName}</p>
+                                                <p className="text-sm text-muted-foreground mt-2">{savedAddress.address}</p>
+                                                <p className="text-sm text-muted-foreground">{savedAddress.city}, {savedAddress.zipCode}</p>
+                                                <p className="text-sm text-muted-foreground">{savedAddress.country}</p>
+                                            </div>
+                                            <Button 
+                                                variant="outline" 
+                                                size="sm"
+                                                onClick={() => setShowAddressForm(true)}
+                                                className="text-xs"
+                                            >
+                                                Change Address
+                                            </Button>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <div className="bg-white border border-border rounded-2xl p-6 shadow-sm">
+                                        <div className="grid grid-cols-2 gap-6">
+                                            <div>
+                                                <label className="text-xs uppercase tracking-wider text-muted-foreground mb-2 block">First Name</label>
+                                                <input 
+                                                    type="text" 
+                                                    name="firstName"
+                                                    value={addressForm.firstName}
+                                                    onChange={handleAddressChange}
+                                                    className="w-full border-b border-border py-2 text-sm outline-none focus:border-foreground transition-colors"
+                                                />
+                                            </div>
+                                            <div>
+                                                <label className="text-xs uppercase tracking-wider text-muted-foreground mb-2 block">Last Name</label>
+                                                <input 
+                                                    type="text" 
+                                                    name="lastName"
+                                                    value={addressForm.lastName}
+                                                    onChange={handleAddressChange}
+                                                    className="w-full border-b border-border py-2 text-sm outline-none focus:border-foreground transition-colors"
+                                                />
+                                            </div>
+                                            <div className="col-span-2">
+                                                <label className="text-xs uppercase tracking-wider text-muted-foreground mb-2 block">Address</label>
+                                                <input 
+                                                    type="text" 
+                                                    name="address"
+                                                    value={addressForm.address}
+                                                    onChange={handleAddressChange}
+                                                    className="w-full border-b border-border py-2 text-sm outline-none focus:border-foreground transition-colors"
+                                                />
+                                            </div>
+                                            <div>
+                                                <label className="text-xs uppercase tracking-wider text-muted-foreground mb-2 block">City</label>
+                                                <input 
+                                                    type="text" 
+                                                    name="city"
+                                                    value={addressForm.city}
+                                                    onChange={handleAddressChange}
+                                                    className="w-full border-b border-border py-2 text-sm outline-none focus:border-foreground transition-colors"
+                                                />
+                                            </div>
+                                            <div>
+                                                <label className="text-xs uppercase tracking-wider text-muted-foreground mb-2 block">Zip Code</label>
+                                                <input 
+                                                    type="text" 
+                                                    name="zipCode"
+                                                    value={addressForm.zipCode}
+                                                    onChange={handleAddressChange}
+                                                    className="w-full border-b border-border py-2 text-sm outline-none focus:border-foreground transition-colors"
+                                                />
+                                            </div>
+                                            <div className="col-span-2">
+                                                <label className="text-xs uppercase tracking-wider text-muted-foreground mb-2 block">Country</label>
+                                                <input 
+                                                    type="text" 
+                                                    name="country"
+                                                    value={addressForm.country}
+                                                    onChange={handleAddressChange}
+                                                    className="w-full border-b border-border py-2 text-sm outline-none focus:border-foreground transition-colors"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="flex gap-4 mt-8">
+                                            <Button 
+                                                variant="editorial"
+                                                size="sm"
+                                                onClick={saveAddress}
+                                                className="text-xs"
+                                            >
+                                                Save Address
+                                            </Button>
+                                            {savedAddress && (
+                                                <Button 
+                                                    variant="ghost"
+                                                    size="sm"
+                                                    onClick={() => setShowAddressForm(false)}
+                                                    className="text-xs"
+                                                >
+                                                    Cancel
+                                                </Button>
+                                            )}
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         )}
 

@@ -1,4 +1,4 @@
-import { Star, ShoppingBag } from "lucide-react";
+import { Star, ShoppingBag, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Product } from "@/data/products";
 import { useCart } from "@/contexts/CartContext";

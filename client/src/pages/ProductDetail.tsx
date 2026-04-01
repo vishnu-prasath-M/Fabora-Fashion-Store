@@ -43,8 +43,14 @@ const ProductDetail = () => {
   const [quantity, setQuantity] = useState(1);
   const [openSection, setOpenSection] = useState<string | null>("details");
   const [modalOpen, setModalOpen] = useState(false);
+  const [imgError, setImgError] = useState(false);
+  const placeholderImage = "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800&q=80";
   const { addItem } = useCart();
   const { isInWishlist, toggleWishlist } = useWishlist();
+
+  const handleImageError = () => {
+    setImgError(true);
+  };
 
   // Fetch product from database
   const { data: product, isLoading, isError } = useQuery({
@@ -136,10 +142,11 @@ const ProductDetail = () => {
           <div>
             <div className="aspect-[3/4] bg-secondary overflow-hidden mb-4 rounded-2xl">
               <img 
-                src={product.image} 
+                src={imgError ? placeholderImage : product.image} 
                 alt={product.name} 
                 width={900} 
-                height={1200} 
+                height={1200}
+                onError={handleImageError}
                 className={`w-full h-full object-cover transition-all duration-500 ${
                   product.colors[selectedColor]?.name === "Black" ? "brightness-[0.35] grayscale-[0.3]" : ""
                 }`}

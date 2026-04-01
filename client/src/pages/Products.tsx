@@ -164,7 +164,7 @@ const Products = () => {
         </div>
 
         <div className="flex flex-col md:flex-row gap-12 items-start">
-          <aside className="w-full md:w-56 shrink-0 sticky top-24 self-start">
+          <aside className="w-full md:w-56 shrink-0 md:sticky md:top-24 md:self-start">
             <div className="mb-10">
               <h4 className="text-xs uppercase tracking-[0.2em] font-sans mb-4">Category</h4>
               <div className="flex flex-col gap-2">
