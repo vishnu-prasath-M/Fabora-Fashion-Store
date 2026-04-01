@@ -9,8 +9,6 @@ import { ShoppingBag, ChevronRight, Search, Loader2 } from "lucide-react";
 import Shopbann from "@/assets/sale-rack2.png";
 import { useQuery } from "@tanstack/react-query";
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "https://fabora-fashion-store-backend.onrender.com";
-
 const sizeOptions = ["XS", "S", "M", "L", "XL"];
 const colorOptions = [
   { name: "Black", hex: "#1a1a1a" },
@@ -35,7 +33,7 @@ const Products = () => {
   const { data: dbProducts, isLoading, isError } = useQuery({
     queryKey: ["products"],
     queryFn: async () => {
-      const response = await fetch(`${API_BASE_URL}/api/products`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/products`);
       if (!response.ok) throw new Error("Failed to fetch products");
       const data = await response.json();
       // Map _id to id for frontend compatibility
