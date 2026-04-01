@@ -16,6 +16,7 @@ const authUser = async (req, res) => {
                 name: user.name,
                 email: user.email,
                 avatar: user.avatar,
+                isAdmin: user.isAdmin,
                 token: generateToken(user._id),
             });
         } else {
@@ -71,9 +72,33 @@ const getUserProfile = async (req, res) => {
             email: user.email,
             avatar: user.avatar,
             addresses: user.addresses,
+            isAdmin: user.isAdmin,
         });
     } else {
         res.status(404).json({ message: 'User not found' });
+    }
+};
+
+// @desc    Create admin user if not exists
+// @access  Private (system)
+const createAdminUser = async () => {
+    try {
+        const adminEmail = 'Admin@gmail.com';
+        const adminPassword = 'Admin1234';
+
+        const adminExists = await User.findOne({ email: adminEmail });
+
+        if (!adminExists) {
+            await User.create({
+                name: 'Administrator',
+                email: adminEmail,
+                password: adminPassword,
+                isAdmin: true,
+            });
+            console.log('Admin user created successfully');
+        }
+    } catch (error) {
+        console.error('Error creating admin user:', error);
     }
 };
 
@@ -81,4 +106,5 @@ module.exports = {
     authUser,
     registerUser,
     getUserProfile,
+    createAdminUser,
 };

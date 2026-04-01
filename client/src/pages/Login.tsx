@@ -13,8 +13,8 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   
-  const [email, setEmail] = useState("Admin@gmail.com");
-  const [password, setPassword] = useState("Admin1234");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [name, setName] = useState("");
 
   const { login, user } = useAuth();
@@ -55,7 +55,12 @@ const Login = () => {
                 title: isLogin ? "Welcome back!" : "Account created!",
                 description: isLogin ? "Successfully logged in." : "You can now start shopping.",
             });
-            navigate("/");
+            // Redirect admin to dashboard, regular users to home
+            if (data.isAdmin) {
+                navigate("/admin/dashboard");
+            } else {
+                navigate("/");
+            }
         } else {
             toast({
                 title: "Authentication Error",

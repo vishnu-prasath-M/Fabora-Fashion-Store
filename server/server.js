@@ -6,12 +6,16 @@ const productRoutes = require('./routes/productRoutes');
 const authRoutes = require('./routes/authRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 const adminRoutes = require('./routes/adminRoutes');
+const { createAdminUser } = require('./controllers/authController');
 
 // Load environment variables
 dotenv.config();
 
 // Connect to database
 connectDB();
+
+// Create admin user if not exists
+createAdminUser();
 
 const app = express();
 
