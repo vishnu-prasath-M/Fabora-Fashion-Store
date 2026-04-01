@@ -1,0 +1,648 @@
+[
+  {
+    "name": "Cashmere Crew Sweater",
+    "price": 899,
+    "category": "Women",
+    "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&q=80",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": [
+      { "name": "Cream", "hex": "#F5F0E8" },
+      { "name": "Black", "hex": "#1a1a1a" }
+    ],
+    "description": "Luxuriously soft cashmere crew neck sweater with ribbed trim. A timeless layering essential crafted from premium Mongolian cashmere.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Tailored Wool Trousers",
+    "price": 799,
+    "category": "Men",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=800&q=80",
+    "sizes": ["28", "30", "32", "34", "36"],
+    "colors": [
+      { "name": "Black", "hex": "#1a1a1a" },
+      { "name": "Charcoal", "hex": "#333" }
+    ],
+    "description": "Impeccably tailored high-waisted trousers in Italian wool. Features a clean front pleat and tapered leg.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Cotton Oxford Shirt",
+    "price": 599,
+    "category": "Men",
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&q=80",
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": [
+      { "name": "White", "hex": "#fff" },
+      { "name": "Light Blue", "hex": "#B8C9D9" }
+    ],
+    "description": "Classic button-down oxford shirt in premium organic cotton. Relaxed fit with a softly curved hem.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Silk V-Neck Blouse",
+    "price": 749,
+    "category": "Women",
+    "image": "https://images.unsplash.com/photo-1595777457583-95ce059f530d?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1595777457583-95ce059f530d?w=800&q=80",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": [
+      { "name": "Cream", "hex": "#F5E6D0" },
+      { "name": "Blush", "hex": "#E8C4B8" }
+    ],
+    "description": "Elegant silk blouse with a flattering V-neckline and puff sleeves. Crafted from mulberry silk with mother-of-pearl buttons.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Wool Overcoat",
+    "price": 999,
+    "category": "Men",
+    "image": "https://images.unsplash.com/photo-1544923246-77307dd628b9?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1544923246-77307dd628b9?w=800&q=80",
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": [
+      { "name": "Camel", "hex": "#C4943A" },
+      { "name": "Black", "hex": "#1a1a1a" }
+    ],
+    "description": "Statement overcoat in double-faced wool. Single-breasted silhouette with notch lapels and a relaxed fit.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Knit Polo Shirt",
+    "price": 549,
+    "category": "Men",
+    "image": "https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=800&q=80",
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": [
+      { "name": "Navy", "hex": "#1B2A4A" },
+      { "name": "Forest", "hex": "#2D4A3E" }
+    ],
+    "description": "Fine-gauge knit polo in premium mercerised cotton. Clean collar with two-button placket.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Classic Denim Jacket",
+    "price": 849,
+    "category": "Men",
+    "image": "https://images.unsplash.com/photo-1523205771623-e0faa4d2813d?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1523205771623-e0faa4d2813d?w=800&q=80",
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "colors": [
+      { "name": "Indigo", "hex": "#3F51B5" },
+      { "name": "Black", "hex": "#1a1a1a" }
+    ],
+    "description": "Timeless denim jacket with a modern fit. Crafted from premium cotton denim with vintage wash finish.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Merino Wool Sweater",
+    "price": 699,
+    "category": "Men",
+    "image": "https://images.unsplash.com/photo-1638176311291-361324d2763a?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1638176311291-361324d2763a?w=800&q=80",
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": [
+      { "name": "Charcoal", "hex": "#36454F" },
+      { "name": "Burgundy", "hex": "#800020" }
+    ],
+    "description": "Ultra-soft merino wool sweater. Lightweight yet warm, perfect for layering in any season.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Slim Fit Chinos",
+    "price": 549,
+    "category": "Men",
+    "image": "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=800&q=80",
+    "sizes": ["28", "30", "32", "34", "36", "38"],
+    "colors": [
+      { "name": "Khaki", "hex": "#C3B091" },
+      { "name": "Navy", "hex": "#1B2A4A" }
+    ],
+    "description": "Versatile slim-fit chinos in breathable cotton stretch. Perfect for office or casual wear.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Leather Bomber Jacket",
+    "price": 999,
+    "category": "Men",
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&q=80",
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": [
+      { "name": "Brown", "hex": "#8B4513" },
+      { "name": "Black", "hex": "#1a1a1a" }
+    ],
+    "description": "Premium lambskin leather bomber jacket. Classic silhouette with ribbed cuffs and hem.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Pique Polo Shirt",
+    "price": 449,
+    "category": "Men",
+    "image": "https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?w=800&q=80",
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "colors": [
+      { "name": "White", "hex": "#FFFFFF" },
+      { "name": "Navy", "hex": "#1B2A4A" },
+      { "name": "Red", "hex": "#DC143C" }
+    ],
+    "description": "Classic pique polo shirt in breathable cotton. Three-button placket with ribbed collar.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Corduroy Shirt Jacket",
+    "price": 649,
+    "category": "Men",
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&q=80",
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": [
+      { "name": "Olive", "hex": "#556B2F" },
+      { "name": "Rust", "hex": "#B7410E" }
+    ],
+    "description": "Thick corduroy overshirt with button front and chest pockets. Perfect transitional piece.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Linen Summer Blazer",
+    "price": 899,
+    "category": "Men",
+    "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80",
+    "sizes": ["38", "40", "42", "44"],
+    "colors": [
+      { "name": "Beige", "hex": "#F5F5DC" },
+      { "name": "Light Blue", "hex": "#ADD8E6" }
+    ],
+    "description": "Unstructured linen blazer for warm weather. Lightweight, breathable, and effortlessly stylish.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Crew Neck T-Shirt Pack",
+    "price": 349,
+    "category": "Men",
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80",
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": [
+      { "name": "White", "hex": "#FFFFFF" },
+      { "name": "Black", "hex": "#1a1a1a" },
+      { "name": "Gray", "hex": "#808080" }
+    ],
+    "description": "Pack of 3 premium cotton crew neck t-shirts. Soft, durable, and perfect for everyday wear.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Wool Blend Peacoat",
+    "price": 949,
+    "category": "Men",
+    "image": "https://images.unsplash.com/photo-1544923246-77307dd628b9?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1544923246-77307dd628b9?w=800&q=80",
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "colors": [
+      { "name": "Navy", "hex": "#1B2A4A" },
+      { "name": "Charcoal", "hex": "#36454F" }
+    ],
+    "description": "Double-breasted wool blend peacoat. Classic naval style with modern slim fit.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Performance Joggers",
+    "price": 499,
+    "category": "Men",
+    "image": "https://images.unsplash.com/photo-1517445312882-fa99e30e7fc0?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1517445312882-fa99e30e7fc0?w=800&q=80",
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": [
+      { "name": "Black", "hex": "#1a1a1a" },
+      { "name": "Gray", "hex": "#808080" }
+    ],
+    "description": "Technical fabric joggers with moisture-wicking properties. Elastic waist with drawstring.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Wrap Midi Dress",
+    "price": 849,
+    "category": "Women",
+    "image": "https://images.unsplash.com/photo-1595777457583-95ce059f530d?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1595777457583-95ce059f530d?w=800&q=80",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": [
+      { "name": "Floral", "hex": "#FFB6C1" },
+      { "name": "Black", "hex": "#1a1a1a" }
+    ],
+    "description": "Elegant wrap-style midi dress with adjustable tie waist. Flowy fabric perfect for any occasion.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Cashmere Turtleneck",
+    "price": 949,
+    "category": "Women",
+    "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&q=80",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": [
+      { "name": "Cream", "hex": "#F5F0E8" },
+      { "name": "Gray", "hex": "#808080" }
+    ],
+    "description": "Luxurious cashmere turtleneck sweater. Ultra-soft with a relaxed fit for ultimate comfort.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "High-Waisted Jeans",
+    "price": 649,
+    "category": "Women",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=800&q=80",
+    "sizes": ["24", "26", "28", "30", "32"],
+    "colors": [
+      { "name": "Blue", "hex": "#4169E1" },
+      { "name": "Black", "hex": "#1a1a1a" }
+    ],
+    "description": "Figure-flattering high-waisted jeans with stretch denim. Classic five-pocket styling.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Pleated Midi Skirt",
+    "price": 749,
+    "category": "Women",
+    "image": "https://images.unsplash.com/photo-1583496661160-fb5886a0ab2d?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1583496661160-fb5886a0ab2d?w=800&q=80",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": [
+      { "name": "Beige", "hex": "#F5F5DC" },
+      { "name": "Navy", "hex": "#1B2A4A" }
+    ],
+    "description": "Elegant pleated midi skirt with flowing movement. Elastic waistband for comfort.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Oversized Blazer",
+    "price": 899,
+    "category": "Women",
+    "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": [
+      { "name": "Camel", "hex": "#C4943A" },
+      { "name": "Black", "hex": "#1a1a1a" }
+    ],
+    "description": "Modern oversized blazer with single-button closure. Structured shoulders with relaxed fit.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Satin Camisole Top",
+    "price": 549,
+    "category": "Women",
+    "image": "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=800&q=80",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": [
+      { "name": "Champagne", "hex": "#F7E7CE" },
+      { "name": "Black", "hex": "#1a1a1a" }
+    ],
+    "description": "Elegant satin camisole with delicate straps. Perfect for layering or wearing alone.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Wide Leg Trousers",
+    "price": 699,
+    "category": "Women",
+    "image": "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&q=80",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": [
+      { "name": "Cream", "hex": "#F5F0E8" },
+      { "name": "Black", "hex": "#1a1a1a" }
+    ],
+    "description": "Sophisticated wide-leg trousers with high waist. Fluid fabric creates elegant movement.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Knit Cardigan",
+    "price": 649,
+    "category": "Women",
+    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=800&q=80",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": [
+      { "name": "Pink", "hex": "#FFC0CB" },
+      { "name": "Gray", "hex": "#808080" }
+    ],
+    "description": "Cozy oversized knit cardigan with button front. Soft chunky knit perfect for layering.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Slip Dress",
+    "price": 799,
+    "category": "Women",
+    "image": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=800&q=80",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": [
+      { "name": "Black", "hex": "#1a1a1a" },
+      { "name": "Burgundy", "hex": "#800020" }
+    ],
+    "description": "Minimalist slip dress with delicate straps. Adjustable fit with elegant drape.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Cropped Denim Jacket",
+    "price": 749,
+    "category": "Women",
+    "image": "https://images.unsplash.com/photo-1551537482-f2075a1d41f2?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1551537482-f2075a1d41f2?w=800&q=80",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": [
+      { "name": "Light Wash", "hex": "#87CEEB" },
+      { "name": "Medium Wash", "hex": "#4682B4" }
+    ],
+    "description": "Trendy cropped denim jacket with vintage wash. Classic styling with modern silhouette.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Leather Crossbody Bag",
+    "price": 849,
+    "category": "Accessories",
+    "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&q=80",
+    "sizes": ["One Size"],
+    "colors": [
+      { "name": "Brown", "hex": "#8B4513" },
+      { "name": "Black", "hex": "#1a1a1a" }
+    ],
+    "description": "Compact leather crossbody bag with adjustable strap. Multiple compartments for organization.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Silk Scarf",
+    "price": 449,
+    "category": "Accessories",
+    "image": "https://images.unsplash.com/photo-1584030373081-f37b7bb4fa33?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1584030373081-f37b7bb4fa33?w=800&q=80",
+    "sizes": ["One Size"],
+    "colors": [
+      { "name": "Multicolor", "hex": "#FF69B4" },
+      { "name": "Navy", "hex": "#1B2A4A" }
+    ],
+    "description": "100% silk scarf with artistic print. Perfect for adding color to any outfit.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Classic Watch",
+    "price": 799,
+    "category": "Accessories",
+    "image": "https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=800&q=80",
+    "sizes": ["One Size"],
+    "colors": [
+      { "name": "Silver", "hex": "#C0C0C0" },
+      { "name": "Gold", "hex": "#FFD700" }
+    ],
+    "description": "Minimalist analog watch with leather strap. Water-resistant with precise quartz movement.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Leather Belt",
+    "price": 399,
+    "category": "Accessories",
+    "image": "https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=800&q=80",
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": [
+      { "name": "Brown", "hex": "#8B4513" },
+      { "name": "Black", "hex": "#1a1a1a" }
+    ],
+    "description": "Full-grain leather belt with classic buckle. Durable construction that ages beautifully.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Canvas Tote Bag",
+    "price": 349,
+    "category": "Accessories",
+    "image": "https://images.unsplash.com/photo-1559563458-527698bf5295?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1559563458-527698bf5295?w=800&q=80",
+    "sizes": ["One Size"],
+    "colors": [
+      { "name": "Natural", "hex": "#F5F5DC" },
+      { "name": "Black", "hex": "#1a1a1a" }
+    ],
+    "description": "Spacious canvas tote bag with reinforced handles. Perfect for everyday errands.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Wool Beanie",
+    "price": 299,
+    "category": "Accessories",
+    "image": "https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=800&q=80",
+    "sizes": ["One Size"],
+    "colors": [
+      { "name": "Charcoal", "hex": "#36454F" },
+      { "name": "Navy", "hex": "#1B2A4A" }
+    ],
+    "description": "Soft wool blend beanie for cold weather. Ribbed knit with fold-over cuff.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Leather Wallet",
+    "price": 449,
+    "category": "Accessories",
+    "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=800&q=80",
+    "sizes": ["One Size"],
+    "colors": [
+      { "name": "Brown", "hex": "#8B4513" },
+      { "name": "Black", "hex": "#1a1a1a" }
+    ],
+    "description": "Slim leather bifold wallet with card slots. RFID blocking technology included.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Sunglasses",
+    "price": 599,
+    "category": "Accessories",
+    "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&q=80",
+    "sizes": ["One Size"],
+    "colors": [
+      { "name": "Black", "hex": "#1a1a1a" },
+      { "name": "Tortoise", "hex": "#D2691E" }
+    ],
+    "description": "Classic wayfarer style sunglasses with UV400 protection. Lightweight acetate frames.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Backpack",
+    "price": 749,
+    "category": "Accessories",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64a62?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1553062407-98eeb64a62?w=800&q=80",
+    "sizes": ["One Size"],
+    "colors": [
+      { "name": "Olive", "hex": "#556B2F" },
+      { "name": "Black", "hex": "#1a1a1a" }
+    ],
+    "description": "Minimalist backpack with padded laptop compartment. Water-resistant fabric with clean design.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Leather Gloves",
+    "price": 549,
+    "category": "Accessories",
+    "image": "https://images.unsplash.com/photo-1546201088-46f0d5e28a9e?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1546201088-46f0d5e28a9e?w=800&q=80",
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": [
+      { "name": "Brown", "hex": "#8B4513" },
+      { "name": "Black", "hex": "#1a1a1a" }
+    ],
+    "description": "Premium leather gloves with cashmere lining. Touchscreen compatible fingertips.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Kids Denim Jacket",
+    "price": 549,
+    "category": "Kids",
+    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=800&q=80",
+    "sizes": ["2T", "3T", "4T", "5T", "6"],
+    "colors": [
+      { "name": "Light Blue", "hex": "#ADD8E6" },
+      { "name": "Dark Blue", "hex": "#00008B" }
+    ],
+    "description": "Classic denim jacket for kids with button front. Durable cotton denim for active play.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Graphic T-Shirt",
+    "price": 299,
+    "category": "Kids",
+    "image": "https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=800&q=80",
+    "sizes": ["2T", "3T", "4T", "5T", "6", "7"],
+    "colors": [
+      { "name": "White", "hex": "#FFFFFF" },
+      { "name": "Blue", "hex": "#4169E1" }
+    ],
+    "description": "Fun graphic print t-shirt in soft cotton. Vibrant colors that kids love.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Cozy Fleece Hoodie",
+    "price": 399,
+    "category": "Kids",
+    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=800&q=80",
+    "sizes": ["2T", "3T", "4T", "5T", "6", "7"],
+    "colors": [
+      { "name": "Gray", "hex": "#808080" },
+      { "name": "Pink", "hex": "#FFC0CB" }
+    ],
+    "description": "Warm fleece hoodie with kangaroo pocket. Soft and cozy for chilly days.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Cotton Pajama Set",
+    "price": 349,
+    "category": "Kids",
+    "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80",
+    "sizes": ["2T", "3T", "4T", "5T", "6"],
+    "colors": [
+      { "name": "Blue Stripes", "hex": "#87CEEB" },
+      { "name": "Pink Dots", "hex": "#FFB6C1" }
+    ],
+    "description": "Soft cotton pajama set with fun patterns. Comfortable fit for a good night's sleep.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Rain Boots",
+    "price": 449,
+    "category": "Kids",
+    "image": "https://images.unsplash.com/photo-1559563362-c667ba5f5480?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1559563362-c667ba5f5480?w=800&q=80",
+    "sizes": ["5", "6", "7", "8", "9", "10"],
+    "colors": [
+      { "name": "Yellow", "hex": "#FFFF00" },
+      { "name": "Red", "hex": "#DC143C" }
+    ],
+    "description": "Waterproof rain boots with fun colors. Easy pull-on handles for independence.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "School Backpack",
+    "price": 499,
+    "category": "Kids",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64a62?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1553062407-98eeb64a62?w=800&q=80",
+    "sizes": ["One Size"],
+    "colors": [
+      { "name": "Blue", "hex": "#4169E1" },
+      { "name": "Pink", "hex": "#FFC0CB" }
+    ],
+    "description": "Durable school backpack with multiple compartments. Padded straps for comfort.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Winter Coat",
+    "price": 649,
+    "category": "Kids",
+    "image": "https://images.unsplash.com/photo-1544923246-77307dd628b9?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1544923246-77307dd628b9?w=800&q=80",
+    "sizes": ["2T", "3T", "4T", "5T", "6", "7"],
+    "colors": [
+      { "name": "Red", "hex": "#DC143C" },
+      { "name": "Navy", "hex": "#1B2A4A" }
+    ],
+    "description": "Warm padded winter coat with hood. Water-resistant shell with cozy lining.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Cotton Shorts",
+    "price": 299,
+    "category": "Kids",
+    "image": "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=800&q=80",
+    "sizes": ["2T", "3T", "4T", "5T", "6", "7"],
+    "colors": [
+      { "name": "Khaki", "hex": "#C3B091" },
+      { "name": "Navy", "hex": "#1B2A4A" }
+    ],
+    "description": "Comfortable cotton shorts with elastic waist. Perfect for summer play.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Party Dress",
+    "price": 549,
+    "category": "Kids",
+    "image": "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=800&q=80",
+    "sizes": ["2T", "3T", "4T", "5T", "6", "7"],
+    "colors": [
+      { "name": "Pink", "hex": "#FFC0CB" },
+      { "name": "Purple", "hex": "#800080" }
+    ],
+    "description": "Beautiful party dress with tulle skirt. Perfect for special occasions and celebrations.",
+    "brand": "MAISON"
+  },
+  {
+    "name": "Sneakers",
+    "price": 449,
+    "category": "Kids",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80",
+    "sizes": ["5", "6", "7", "8", "9", "10", "11", "12"],
+    "colors": [
+      { "name": "White", "hex": "#FFFFFF" },
+      { "name": "Blue", "hex": "#4169E1" }
+    ],
+    "description": "Comfortable sneakers with easy velcro straps. Cushioned sole for active kids.",
+    "brand": "MAISON"
+  }
+]

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fabora - A Fashion Store</title>
+    <meta name="description" content="Fabora - Redefining modern elegance through timeless design and premium craftsmanship." />
+    <meta name="author" content="Fabora" />
+
+    <meta property="og:title" content="Fabora - A Fashion Store" />
+    <meta property="og:description" content="Redefining modern elegance through timeless design and premium craftsmanship." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@fabora" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z'/><path d='M3 6h18'/><path d='M16 10a4 4 0 0 1-8 0'/></svg>" type="image/svg+xml" />
+    
+    <style>
+      #fabora-splash {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        z-index: 99999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.5s ease-out;
+      }
+      #fabora-splash.hide {
+        opacity: 0;
+        pointer-events: none;
+      }
+      #fabora-splash img, #fabora-splash .logo-img {
+        max-width: 30%;
+        max-height: 30%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="fabora-splash">
+      <img src="/mylogo.png" alt="Fabora" />
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Hide splash screen after 2 seconds
+      setTimeout(function() {
+        var splash = document.getElementById('fabora-splash');
+        if (splash) {
+          splash.classList.add('hide');
+          setTimeout(function() {
+            splash.style.display = 'none';
+          }, 500);
+        }
+      }, 2000);
+    </script>
+  </body>
+</html>
