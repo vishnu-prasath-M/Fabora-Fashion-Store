@@ -644,5 +644,175 @@
     ],
     "description": "Comfortable sneakers with easy velcro straps. Cushioned sole for active kids.",
     "brand": "MAISON"
+  },
+  {
+    "name": "Urban Explorer Backpack",
+    "price": 899,
+    "category": "Bags",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64a62?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1553062407-98eeb64a62?w=800&q=80",
+    "sizes": ["One Size"],
+    "colors": [
+      { "name": "Charcoal", "hex": "#36454F" },
+      { "name": "Olive", "hex": "#556B2F" }
+    ],
+    "description": "Modern rolltop backpack designed for city movement, secure storage, and minimalist style. Weather-resistant fabric with padded laptop compartment.",
+    "brand": "FABORA"
+  },
+  {
+    "name": "Utility Tote Backpack",
+    "price": 749,
+    "category": "Bags",
+    "image": "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=800&q=80",
+    "sizes": ["One Size"],
+    "colors": [
+      { "name": "Navy", "hex": "#1B2A4A" },
+      { "name": "Mustard", "hex": "#D4AF37" }
+    ],
+    "description": "A versatile carry solution that combines spacious design with lightweight comfort for daily essentials. Multiple compartments for organization.",
+    "brand": "FABORA"
+  },
+  {
+    "name": "Signature Carry Tote",
+    "price": 649,
+    "category": "Bags",
+    "image": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=800&q=80",
+    "sizes": ["One Size"],
+    "colors": [
+      { "name": "Teal", "hex": "#008080" },
+      { "name": "Mustard", "hex": "#D4AF37" }
+    ],
+    "description": "A refined everyday tote built with durable materials and a clean modern silhouette. Perfect for work or weekend adventures.",
+    "brand": "FABORA"
+  },
+  {
+    "name": "Classic White Sneakers",
+    "price": 599,
+    "category": "Shoes",
+    "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&q=80",
+    "sizes": ["7", "8", "9", "10", "11", "12"],
+    "colors": [
+      { "name": "White", "hex": "#FFFFFF" },
+      { "name": "Black", "hex": "#1a1a1a" }
+    ],
+    "description": "Minimalist leather sneakers with clean lines and premium comfort. Versatile style for any occasion.",
+    "brand": "FABORA"
+  },
+  {
+    "name": "Sport Runner Pro",
+    "price": 799,
+    "category": "Shoes",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80",
+    "sizes": ["7", "8", "9", "10", "11", "12"],
+    "colors": [
+      { "name": "Red", "hex": "#DC143C" },
+      { "name": "Blue", "hex": "#4169E1" }
+    ],
+    "description": "High-performance running shoes with cushioned soles and breathable mesh upper. Designed for maximum comfort during workouts.",
+    "brand": "FABORA"
+  },
+  {
+    "name": "Leather Chelsea Boots",
+    "price": 999,
+    "category": "Shoes",
+    "image": "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=800&q=80",
+    "sizes": ["7", "8", "9", "10", "11", "12"],
+    "colors": [
+      { "name": "Brown", "hex": "#8B4513" },
+      { "name": "Black", "hex": "#1a1a1a" }
+    ],
+    "description": "Premium leather chelsea boots with elastic side panels. Classic silhouette with modern comfort technology.",
+    "brand": "FABORA"
+  },
+  {
+    "name": "Essential Cotton T-Shirt",
+    "price": 299,
+    "category": "T-Shirts",
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80",
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "colors": [
+      { "name": "White", "hex": "#FFFFFF" },
+      { "name": "Black", "hex": "#1a1a1a" },
+      { "name": "Gray", "hex": "#808080" }
+    ],
+    "description": "Premium 100% cotton t-shirt with a classic fit. Soft, breathable fabric perfect for everyday wear.",
+    "brand": "FABORA"
+  },
+  {
+    "name": "Graphic Print Tee",
+    "price": 349,
+    "category": "T-Shirts",
+    "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=80",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": [
+      { "name": "White", "hex": "#FFFFFF" },
+      { "name": "Navy", "hex": "#1B2A4A" }
+    ],
+    "description": "Stylish graphic print t-shirt with artistic designs. Made from soft cotton with a relaxed fit.",
+    "brand": "FABORA"
+  },
+  {
+    "name": "V-Neck Basic Tee",
+    "price": 279,
+    "category": "T-Shirts",
+    "image": "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=800&q=80",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": [
+      { "name": "White", "hex": "#FFFFFF" },
+      { "name": "Black", "hex": "#1a1a1a" },
+      { "name": "Beige", "hex": "#F5F5DC" }
+    ],
+    "description": "Classic V-neck t-shirt in premium cotton. Perfect layering piece with a flattering neckline.",
+    "brand": "FABORA"
+  },
+  {
+    "name": "Lace Bralette",
+    "price": 449,
+    "category": "Bras",
+    "image": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": [
+      { "name": "Black", "hex": "#1a1a1a" },
+      { "name": "Nude", "hex": "#E8C4B8" }
+    ],
+    "description": "Elegant lace bralette with delicate detailing. Comfortable wireless design with adjustable straps.",
+    "brand": "FABORA"
+  },
+  {
+    "name": "Seamless T-Shirt Bra",
+    "price": 499,
+    "category": "Bras",
+    "image": "https://images.unsplash.com/photo-1617331721458-bd3d2dd8f9f2?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1617331721458-bd3d2dd8f9f2?w=800&q=80",
+    "sizes": ["32A", "32B", "34B", "34C", "36C", "36D"],
+    "colors": [
+      { "name": "Nude", "hex": "#E8C4B8" },
+      { "name": "Black", "hex": "#1a1a1a" }
+    ],
+    "description": "Smooth seamless bra perfect for everyday wear. Invisible under clothing with light padding and comfortable support.",
+    "brand": "FABORA"
+  },
+  {
+    "name": "Push-Up Bra",
+    "price": 549,
+    "category": "Bras",
+    "image": "https://images.unsplash.com/photo-1598556776374-0a0bb28f7095?w=800&q=80",
+    "altImage": "https://images.unsplash.com/photo-1598556776374-0a0bb28f7095?w=800&q=80",
+    "sizes": ["32B", "32C", "34B", "34C", "36C"],
+    "colors": [
+      { "name": "Black", "hex": "#1a1a1a" },
+      { "name": "Blush", "hex": "#FFB6C1" }
+    ],
+    "description": "Elegant push-up bra with lift and support. Delicate lace trim and comfortable underwire design.",
+    "brand": "FABORA"
   }
 ]

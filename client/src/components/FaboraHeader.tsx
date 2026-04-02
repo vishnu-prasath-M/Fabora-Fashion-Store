@@ -4,7 +4,7 @@ import { Search, ShoppingBag, User } from "lucide-react";
 import { useCart } from "@/contexts/CartContext";
 import { useAuth } from "@/contexts/AuthContext";
 import { products } from "@/data/products";
-import mylogo from "@/assets/mylogo.png";
+import mylogo from "@/assets/FABORA.png";
 
 const FaboraHeader = () => {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -69,7 +69,7 @@ const FaboraHeader = () => {
           : "bg-transparent"
       }`}
     >
-      <nav className="flex items-center justify-between px-6 md:px-10 py-4 max-w-[1400px] mx-auto">
+      <nav className="flex items-center justify-between px-6 md:px-10 py-2 max-w-[1400px] mx-auto">
         {/* Logo */}
         <Link
           to="/"
@@ -78,7 +78,7 @@ const FaboraHeader = () => {
           <img 
             src={mylogo} 
             alt="Fabora Logo" 
-            className="h-6 md:h-8 w-auto object-contain transition-all duration-500"
+            className="h-9 md:h-16 w-auto object-contain transition-all duration-500"
             style={{ filter: showBg ? 'none' : 'brightness(0) invert(1)' }}
           />
         </Link>

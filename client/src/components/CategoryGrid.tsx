@@ -6,10 +6,10 @@ import catBag from "@/assets/cat-bag.png";
 import catTshirt from "@/assets/cat-tshirt.png";
 
 const categories = [
-  { id: 1, name: "SHOES", image: catShoes, path: "/products?category=shoes" },
-  { id: 2, name: "BRASH", image: catBrush, path: "/products?category=accessories" },
-  { id: 3, name: "BAG", image: catBag, path: "/products?category=bags" },
-  { id: 4, name: "T-SHIRT", image: catTshirt, path: "/products?category=clothing" },
+  { id: 1, name: "SHOES", image: catShoes, search: "shoes" },
+  { id: 2, name: "BRAS", image: catBrush, search: "bras" },
+  { id: 3, name: "BAG", image: catBag, search: "bags" },
+  { id: 4, name: "T-SHIRT", image: catTshirt, search: "t-shirt" },
 ];
 
 const CategoryGrid = () => {
@@ -47,7 +47,7 @@ const CategoryGrid = () => {
         {categories.map((category) => (
           <Link
             key={category.id}
-            to={category.path}
+            to={`/products?search=${category.search}`}
             className="group relative block aspect-[4/3.2] rounded-[2.5rem] overflow-hidden bg-[#f9f9f9] border border-gray-100/50 transition-all duration-500 hover:shadow-xl hover:shadow-black/5"
           >
             <img

@@ -4,7 +4,7 @@ import FaboraHeader from "@/components/FaboraHeader";
 import { Button } from "@/components/ui/button";
 import { Eye, EyeOff, Github, Chrome, Loader2 } from "lucide-react";
 import loginIllustrationDark from "@/assets/login-illustration-dark.png";
-import mylogo from "@/assets/mylogo.png";
+import mylogo from "@/assets/FABORA.png";
 import { useAuth } from "@/contexts/AuthContext";
 import { useToast } from "@/hooks/use-toast";
 
@@ -80,7 +80,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#111812] flex items-center justify-center md:justify-end p-4 md:p-12 lg:p-20 xl:p-28 relative overflow-hidden font-sans">
+    <div className="min-h-screen bg-[#111812] flex items-center justify-center md:justify-end pt-20 md:pt-8 p-4 md:p-12 lg:p-20 xl:p-28 relative overflow-hidden font-sans">
       <FaboraHeader />
       
       {/* Background Illustration Area */}
@@ -112,7 +112,7 @@ const Login = () => {
             {/* Logo & Header */}
             <div className="text-center">
               <Link to="/" className="inline-block mb-6 group">
-                <img src={mylogo} alt="Fabora" className="h-7 object-contain transition-transform group-hover:scale-105" />
+                <img src={mylogo} alt="Fabora" className="h-16 object-contain transition-transform group-hover:scale-105" />
               </Link>
               <h1 className="text-[2.5rem] font-semibold tracking-tight text-[#1a1a1a] mb-1.5 leading-[1.1]">
                 {isLogin ? "Welcome back" : "Create account"}

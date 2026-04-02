@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import mylogo from "@/assets/mylogo.png";
+import mylogo from "@/assets/FABORA.png";
 
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <Link to="/" className="inline-block mb-6 transition-opacity hover:opacity-80">
-              <img src={mylogo} alt="Fabora Logo" className="h-6 md:h-8 w-auto object-contain" style={{ filter: 'brightness(0) invert(1)' }} />
+              <img src={mylogo} alt="Fabora Logo" className="h-6 md:h-20 w-auto object-contain" style={{ filter: 'brightness(0) invert(1)' }} />
             </Link>
             <p className="text-sm text-primary-foreground/60 leading-relaxed font-sans">
               Redefining modern elegance through timeless design and premium craftsmanship.
