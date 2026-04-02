@@ -11,7 +11,8 @@ import {
     Edit2,
     Loader2,
     TrendingUp,
-    DollarSign
+    DollarSign,
+    Search
 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
@@ -37,6 +38,7 @@ const AdminDashboard = () => {
     const { toast } = useToast();
     const [stats, setStats] = useState<Stats | null>(null);
     const [products, setProducts] = useState<Product[]>([]);
+    const [searchQuery, setSearchQuery] = useState('');
     const [pageLoading, setPageLoading] = useState(true);
     const [activeTab, setActiveTab] = useState<'dashboard' | 'products'>('dashboard');
     const [isChecking, setIsChecking] = useState(true);
@@ -126,6 +128,11 @@ const AdminDashboard = () => {
         logout();
         navigate('/admin');
     };
+
+    // Filter products based on search query
+    const filteredProducts = searchQuery
+        ? products.filter(p => p.name.toLowerCase().includes(searchQuery.toLowerCase()))
+        : products;
 
     // Block ALL rendering while checking auth status
     if (loading || isChecking) {
@@ -268,22 +275,47 @@ const AdminDashboard = () => {
                     </>
                 ) : (
                     <>
-                        {/* Products List */}
-                        <div className="flex items-center justify-between mb-6">
-                            <h2 className="text-lg font-medium">All Products ({products.length})</h2>
-                            <Button 
-                                variant="editorial" 
-                                size="sm"
-                                onClick={() => navigate('/admin/add-product')}
-                                className="gap-2"
-                            >
-                                <Plus className="w-4 h-4" />
-                                Add Product
-                            </Button>
+                        {/* Products List Header with Search */}
+                        <div className="flex flex-col gap-4 mb-6">
+                            <div className="flex items-center justify-between">
+                                <h2 className="text-lg font-medium">
+                                    {searchQuery ? `Search Results (${filteredProducts.length})` : `All Products (${products.length})`}
+                                </h2>
+                                <Button 
+                                    variant="editorial" 
+                                    size="sm"
+                                    onClick={() => navigate('/admin/add-product')}
+                                    className="gap-2"
+                                >
+                                    <Plus className="w-4 h-4" />
+                                    Add Product
+                                </Button>
+                            </div>
+                            
+                            {/* Search Bar */}
+                            <div className="relative">
+                                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                                <input
+                                    type="text"
+                                    placeholder="Search products by name..."
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                    className="w-full md:w-80 pl-10 pr-4 py-2.5 rounded-xl border border-border bg-white text-sm focus:outline-none focus:ring-2 focus:ring-foreground/10 transition-all"
+                                />
+                                {searchQuery && (
+                                    <button
+                                        onClick={() => setSearchQuery('')}
+                                        className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-muted-foreground hover:text-foreground"
+                                    >
+                                        Clear
+                                    </button>
+                                )}
+                            </div>
                         </div>
 
+                        {/* Filtered Products Grid */}
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                            {products.map((product) => (
+                            {filteredProducts.map((product) => (
                                 <div key={product._id} className="bg-white rounded-2xl border border-border overflow-hidden group">
                                     <div className="aspect-[3/4] bg-secondary overflow-hidden">
                                         <img 

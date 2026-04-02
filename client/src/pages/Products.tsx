@@ -70,9 +70,9 @@ const Products = () => {
   let filtered = productList.filter((p) => {
     if (selectedCategory !== "All" && p.category !== selectedCategory) return false;
     if (p.price < priceRange[0] || p.price > priceRange[1]) return false;
-    // Search filter
-    if (searchQuery) {
-      const query = searchQuery.toLowerCase();
+    // Search filter - works in real-time as user types
+    if (localSearch) {
+      const query = localSearch.toLowerCase();
       const matchesName = p.name.toLowerCase().includes(query);
       const matchesBrand = p.brand.toLowerCase().includes(query);
       const matchesCategory = p.category.toLowerCase().includes(query);
