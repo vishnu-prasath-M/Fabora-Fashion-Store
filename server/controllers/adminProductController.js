@@ -101,6 +101,10 @@ const updateProduct = async (req, res) => {
             countInStock
         } = req.body;
 
+        // Debug logging
+        console.log('Update Product - ID:', req.params.id);
+        console.log('Image received:', image ? `Yes (length: ${image.length})` : 'No');
+
         product.name = name || product.name;
         product.price = price ? Number(price) : product.price;
         product.category = category || product.category;
@@ -108,13 +112,23 @@ const updateProduct = async (req, res) => {
         product.brand = brand || product.brand;
         product.sizes = sizes || product.sizes;
         product.colors = colors || product.colors;
-        product.image = image || product.image;
-        product.altImage = altImage || product.altImage;
+        
+        // Explicitly update image if provided (even if empty string)
+        if (image !== undefined) {
+            product.image = image;
+            console.log('Image updated in product object');
+        }
+        if (altImage !== undefined) {
+            product.altImage = altImage;
+        }
+        
         product.countInStock = countInStock !== undefined ? Number(countInStock) : product.countInStock;
 
         const updatedProduct = await product.save();
+        console.log('Product saved successfully');
         res.json(updatedProduct);
     } catch (error) {
+        console.error('Error updating product:', error);
         res.status(500).json({ message: 'Error updating product', error: error.message });
     }
 };

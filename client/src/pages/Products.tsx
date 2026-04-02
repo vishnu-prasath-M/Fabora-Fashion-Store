@@ -24,7 +24,7 @@ const Products = () => {
   const filterType = searchParams.get("filter") || "";
   const searchQuery = searchParams.get("search") || "";
   const [selectedCategory, setSelectedCategory] = useState(initialCat);
-  const [priceRange, setPriceRange] = useState([0, 1000]);
+  const [priceRange, setPriceRange] = useState([100, 2000]);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalProductName, setModalProductName] = useState("");
   const [localSearch, setLocalSearch] = useState(searchQuery);
@@ -186,15 +186,15 @@ const Products = () => {
               <h4 className="text-xs uppercase tracking-[0.2em] font-sans mb-4">Price Range</h4>
               <input
                 type="range"
-                min={0}
-                max={600}
+                min={100}
+                max={2000}
                 value={priceRange[1]}
                 onChange={(e) => setPriceRange([0, Number(e.target.value)])}
                 className="w-full accent-foreground"
               />
               <div className="flex justify-between text-xs text-muted-foreground font-sans mt-2">
-                <span>$0</span>
-                <span>${priceRange[1]}</span>
+                <span>₹100</span>
+                <span>₹{priceRange[1]}</span>
               </div>
             </div>
 

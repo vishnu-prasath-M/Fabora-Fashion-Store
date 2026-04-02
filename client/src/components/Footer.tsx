@@ -1,7 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import mylogo from "@/assets/FABORA.png";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path: string) => {
+    navigate(path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return (
     <footer className="bg-foreground text-primary-foreground">
       <div className="px-6 md:px-12 py-16 md:py-24">
@@ -38,13 +44,13 @@ const Footer = () => {
                 { label: "Press", to: "#" },
                 { label: "Sustainability", to: "#" },
               ].map((item) => (
-                <Link 
+                <span 
                   key={item.label} 
-                  to={item.to} 
+                  onClick={() => handleNavigation(item.to)}
                   className="text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors cursor-pointer font-sans"
                 >
                   {item.label}
-                </Link>
+                </span>
               ))}
             </div>
           </div>

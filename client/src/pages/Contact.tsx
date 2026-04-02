@@ -128,8 +128,8 @@ const Contact = () => {
             <div className="absolute inset-0 bg-foreground/40 flex items-center justify-center">
               <div className="bg-background rounded-xl p-6 text-center shadow-lg">
                 <MapPin size={32} className="mx-auto mb-3 text-foreground" />
-                <h3 className="font-sans font-medium mb-1">MAISON Flagship Store</h3>
-                <p className="text-sm text-muted-foreground font-sans">123 Fashion Avenue, New York</p>
+                <h3 className="font-sans font-medium mb-1">Fabora Fashion Store</h3>
+                <p className="text-sm text-muted-foreground font-sans">123 Fashion Avenue, Madurai</p>
               </div>
             </div>
           </div>

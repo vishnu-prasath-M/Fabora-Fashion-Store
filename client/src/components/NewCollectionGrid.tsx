@@ -2,6 +2,10 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 
+
+
+import bagImage from "../assets/images/bag.jpg";
+
 interface Product {
   _id: string;
   name: string;
@@ -30,7 +34,7 @@ const fallbackProducts = [
     name: "Utility Tote Backpack",
     price: 749,
     category: "Bags",
-    image: "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=800&q=80",
+    image: "./assets/images/bag.jpg",
     description: "A versatile carry solution that combines spacious design with lightweight comfort for daily essentials. Multiple compartments for organization.",
     brand: "FABORA"
   },
@@ -88,6 +92,16 @@ const NewCollectionGrid = () => {
 
   return (
     <section className="px-4 md:px-10 py-16 md:py-24 max-w-[1400px] mx-auto">
+      {/* Header */}
+      <div className="text-center mb-12 md:mb-16">
+        <h2 className="editorial-heading text-3xl md:text-5xl lg:text-6xl">
+          New Collection
+        </h2>
+        <p className="mt-4 text-sm md:text-base text-muted-foreground font-sans max-w-md mx-auto">
+          Discover our latest arrivals featuring premium backpacks and totes designed for the modern lifestyle.
+        </p>
+      </div>
+
       {/* Bento Grid Layout */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
         
@@ -101,11 +115,14 @@ const NewCollectionGrid = () => {
               src={leftProduct.image}
               alt={leftProduct.name}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1553062407-98eeb64a62?w=800&q=80";
+              }}
             />
           </div>
           <div className="flex items-start justify-between gap-4">
             <div className="flex-1">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Modern Rolltop Backpack</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Urban Explorer Backpack</h3>
               <p className="text-sm text-gray-500 leading-relaxed line-clamp-2">A sleek everyday backpack designed for city movement, secure storage, and minimalist style.</p>
             </div>
           </div>
@@ -145,6 +162,9 @@ const NewCollectionGrid = () => {
               src={centerProduct.image}
               alt={centerProduct.name}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=800&q=80";
+              }}
             />
           </div>
         </div>
@@ -159,6 +179,9 @@ const NewCollectionGrid = () => {
               src={rightProduct.image}
               alt={rightProduct.name}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=800&q=80";
+              }}
             />
           </div>
           <div className="flex items-start justify-between gap-4">

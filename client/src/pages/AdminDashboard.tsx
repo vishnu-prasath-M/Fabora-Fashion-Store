@@ -32,23 +32,33 @@ interface Product {
 }
 
 const AdminDashboard = () => {
-    const { admin, logout } = useAdminAuth();
+    const { admin, logout, loading } = useAdminAuth();
     const navigate = useNavigate();
     const { toast } = useToast();
     const [stats, setStats] = useState<Stats | null>(null);
     const [products, setProducts] = useState<Product[]>([]);
-    const [loading, setLoading] = useState(true);
+    const [pageLoading, setPageLoading] = useState(true);
     const [activeTab, setActiveTab] = useState<'dashboard' | 'products'>('dashboard');
+    const [isChecking, setIsChecking] = useState(true);
 
     useEffect(() => {
+        // Wait for auth context to finish loading
+        if (loading) return;
+        
+        // Check if admin is logged in
         if (!admin) {
-            navigate('/admin');
-            return;
+            navigate('/admin', { replace: true });
         }
+        
+        setIsChecking(false);
+    }, [admin, navigate, loading]);
 
-        fetchStats();
-        fetchProducts();
-    }, [admin, navigate]);
+    useEffect(() => {
+        if (admin && !isChecking) {
+            fetchStats();
+            fetchProducts();
+        }
+    }, [admin, isChecking]);
 
     const fetchStats = async () => {
         try {
@@ -80,7 +90,7 @@ const AdminDashboard = () => {
         } catch (error) {
             console.error('Error fetching products:', error);
         } finally {
-            setLoading(false);
+            setPageLoading(false);
         }
     };
 
@@ -117,7 +127,19 @@ const AdminDashboard = () => {
         navigate('/admin');
     };
 
-    if (!admin) return null;
+    // Block ALL rendering while checking auth status
+    if (loading || isChecking) {
+        return (
+            <div className="min-h-screen bg-background font-sans flex items-center justify-center">
+                <Loader2 className="w-8 h-8 animate-spin text-muted-foreground" />
+            </div>
+        );
+    }
+
+    // If no admin, don't render anything (redirect is handled in useEffect)
+    if (!admin) {
+        return null;
+    }
 
     return (
         <div className="min-h-screen bg-background font-sans">
@@ -165,7 +187,7 @@ const AdminDashboard = () => {
                     </button>
                 </div>
 
-                {loading ? (
+                {pageLoading ? (
                     <div className="flex items-center justify-center py-20">
                         <Loader2 className="w-8 h-8 animate-spin text-muted-foreground" />
                     </div>
